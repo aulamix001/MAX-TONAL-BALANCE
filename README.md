@@ -7,9 +7,9 @@ Não inclui código, dados de alvos ou assets da iZotope.
 ## Fase 1 — base de desenvolvimento
 
 Inclui dois processadores com passagem de áudio sem alteração, estado APVTS,
-janela escura redimensionável (mínimo 900 × 600), seletor de visualização
-persistente e pipeline de compilação Windows. O seletor ainda não desenha
-espectro: FFT, alvos e EQ pertencem às fases seguintes.
+janela escura redimensionável (mínimo 900 × 600), seletores persistentes e
+pipeline Windows. O preview mostra curvas-semente; FFT ao vivo, importação
+de alvos e EQ pertencem às fases seguintes.
 
 ### Compilar no Windows
 
@@ -26,7 +26,8 @@ Os bundles ficam em `build/TBC_Track_artefacts/Release/VST3/` e
 `build/TBC_Master_artefacts/Release/VST3/`. Copie-os para
 `C:\Program Files\Common Files\VST3` e refaça a busca de plugins na DAW.
 O CI disponibiliza esses diretórios como artefatos quando executado no GitHub.
-Nenhum binário Windows foi validado na sessão Linux de onboarding.
+O build Windows é executado e testado pelo CI; a sessão Linux não valida
+carregamento em DAW Windows.
 
 ### Validação manual da fase
 
